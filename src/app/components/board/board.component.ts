@@ -40,9 +40,18 @@ export class BoardComponent implements OnInit {
 
   changeTurn() {
     /* to Complete **/
+    if(!this.gameover){
+      this.turn='O';
+      this.gameover = false;
+      this.winner = 1;
+    }
+    else {
+      this.turn='X';
+    }
   }
 
   checkWinner() {
     /* To complete **/
+   this.winner="";
   }
 }
